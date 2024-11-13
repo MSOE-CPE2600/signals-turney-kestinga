@@ -4,9 +4,9 @@
  */
 
 /**
- * Modified by:
+ * Modified by: Abe Kesting
  * 
- * Brief summary of modifications:
+ * Brief summary of modifications: made it so sigint does not exit the program
  */
 
 
@@ -19,8 +19,8 @@
  * @brief Signal handler for SIGINT - prints a message and exits
  */
 void handle_signal() {
-    printf("Received a signal\n");
-    exit(1);
+    printf("Received a signal\n"); //does not exit, need to use kill in command line or otherwise send SIGKILL to this process
+    // exit(1);
 }
 
 int main() {
